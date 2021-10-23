@@ -1,0 +1,90 @@
+{
+  "id": "a740d287-0265-417a-b9e3-c4585a7bb194",
+  "version": "2.0",
+  "name": "AdministrarCarrito",
+  "url": "https://www.demoblaze.com",
+  "tests": [{
+    "id": "d25e711e-44c2-4660-a899-717ed2f5ec9d",
+    "name": "AgregarProductoAlCarrito",
+    "commands": [{
+      "id": "5950f489-6c48-4f10-ab59-b7e203ed4820",
+      "comment": "",
+      "command": "open",
+      "target": "/index.html",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d89c317f-c1bf-4afc-925c-fd8ee2904549",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "734x860",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "631a7912-b876-4ac5-a9e1-e19f957018fc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Samsung galaxy s6",
+      "targets": [
+        ["linkText=Samsung galaxy s6", "linkText"],
+        ["css=.col-lg-4:nth-child(1) .hrefch", "css:finder"],
+        ["xpath=//a[contains(text(),'Samsung galaxy s6')]", "xpath:link"],
+        ["xpath=//div[@id='tbodyid']/div/div/div/h4/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'prod.html?idp_=1')])[2]", "xpath:href"],
+        ["xpath=//h4/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Samsung galaxy s6')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6df9811-0052-4984-adb2-9f8d2a1d9388",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Add to cart",
+      "targets": [
+        ["linkText=Add to cart", "linkText"],
+        ["css=.btn-success", "css:finder"],
+        ["xpath=//a[contains(text(),'Add to cart')]", "xpath:link"],
+        ["xpath=//a[@onclick='addToCart(1)']", "xpath:attributes"],
+        ["xpath=//div[@id='tbodyid']/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '#')])[9]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add to cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e28e272-2a42-40c8-9bf8-384fc29407f0",
+      "comment": "",
+      "command": "assertAlert",
+      "target": "Product added.",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f6414f07-57cc-4115-b261-3034b30c5edd",
+      "comment": "",
+      "command": "click",
+      "target": "id=cartur",
+      "targets": [
+        ["id=cartur", "id"],
+        ["linkText=Cart", "linkText"],
+        ["css=#cartur", "css:finder"],
+        ["xpath=//a[contains(text(),'Cart')]", "xpath:link"],
+        ["xpath=//a[@id='cartur']", "xpath:attributes"],
+        ["xpath=//div[@id='navbarExample']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'cart.html')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Cart')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "7b512e23-773d-4a16-a04c-2fc160900fab",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d25e711e-44c2-4660-a899-717ed2f5ec9d"]
+  }],
+  "urls": ["https://www.demoblaze.com/"],
+  "plugins": []
+}
